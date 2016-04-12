@@ -1,0 +1,14 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<%= flash[:registration_message] %>
+<%= flash[:login_error] %>
+<a href="<%= new_user_path %>">Registration</a>
+
+
+
+<form method="post" action="/sessions">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="email" name="email" placeholder="Email" value="bruce@wayne.com">
+	<input type="password" name="password" placeholder="Password" value="password">
+	<input type="submit">
+</form>
